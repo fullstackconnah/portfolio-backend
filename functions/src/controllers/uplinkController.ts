@@ -19,7 +19,7 @@ const uplinkSchema = z.object({
  *
  * @param {Request} req - The incoming request object.
  * @param {Response} res - The response object to send back.
- * @returns {void} Sends a JSON response indicating success or failure.
+ * @return {void} Sends a JSON response indicating success or failure.
  */
 export async function uplinkHandler(req: Request, res: Response): Promise<Response> {
   if (req.method !== "POST") {

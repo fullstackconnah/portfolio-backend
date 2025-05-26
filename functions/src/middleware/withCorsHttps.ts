@@ -3,7 +3,7 @@ import cors from "cors";
 
 const corsHandler = cors({
   origin: (origin, callback) => {
-    const allowedOrigins = ["https://connah.dev", "https://www.connah.dev"];
+    const allowedOrigins = ["https://connah.com.au", "https://www.connah.com.au"];
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {

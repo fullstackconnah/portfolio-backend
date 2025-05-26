@@ -12,7 +12,6 @@ const corsHandler = cors({
  * @param {(req: Request, res: Response) => void} handler - The request handler function to be wrapped.
  * @return {(req: Request, res: Response) => void} A new function that applies CORS and HTTPS checks.
  */
-
 export function withCorsAndHttps(
   handler: (req: Request, res: Response) => void
 ): (req: Request, res: Response) => void {

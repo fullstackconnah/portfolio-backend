@@ -21,7 +21,6 @@ const uplinkSchema = z.object({
  * @param {Response} res - The response object to send back.
  * @returns {void} Sends a JSON response indicating success or failure.
  */
-
 export async function uplinkHandler(req: Request, res: Response): Promise<Response> {
   if (req.method !== "POST") {
     return res.status(405).send("Method Not Allowed");

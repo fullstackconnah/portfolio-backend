@@ -2,22 +2,22 @@ import {Request, Response} from "express";
 import cors from "cors";
 
 const corsHandler = cors({
-    origin: (origin, callback) => {
-      const allowedOrigins = [
-        "https://connah.com.au",
-        "https://www.connah.com.au",
-        "http://localhost:3000"
-      ];
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        console.warn('Blocked by CORS:', origin);
-        callback(null, false);
-      }
-    },
-    methods: ["POST"]
-  });
-  
+  origin: (origin, callback) => {
+    const allowedOrigins = [
+      "https://connah.com.au",
+      "https://www.connah.com.au",
+      "http://localhost:3000",
+    ];
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      console.warn("Blocked by CORS:", origin);
+      callback(null, false);
+    }
+  },
+  methods: ["POST"],
+});
+
 
 /**
  * Middleware to handle CORS and enforce HTTPS for Firebase functions.
